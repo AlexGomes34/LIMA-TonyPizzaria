@@ -55,6 +55,7 @@ header button{
 }
 section{
     height: 100vh;
+    padding: var(--default-padding);
 }
 .home{
     background-image: url(img/bg-home.svg);
@@ -81,21 +82,74 @@ section{
     color: var(--primary-color);
 }
 .cardapio{
-    background-color: palegreen;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.titulo-secao{
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+.titulo-secao h3{
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.cardapio-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border-bottom: 2px solid var(--secundary-color);
+    height: 260px;
+}
+.cabecalho-item{
+    display: flex;
+    justify-content: space-between;
+    color: var(--primary-color);
+}
+.cabecalho-item h4, .cabecalho-item a{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.cardapio-item.bebidas{
+    border: none;
+}
+.cardapio-item.bebidas .produto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 4px;
+    padding: 16px;
+}
+.cardapio-item.bebidas .produto:hover{
+    box-shadow: 2px 2px 8px #bbb;
+    transition: 0.5s;
+}
+.cardapio-item.bebidas .valor{
+    width: 100%;
+    font-size: 1rem;
+    color: var(--primary-color);
+
+}
+.cardapio-item.bebidas .descricao{
+    font-size: 0.5rem;
+    width: 100%;
 }
 .servicos{
     background-color: aquamarine;
 }
-.container-pizza{
+.container-produtos{
     justify-content: space-between;
     align-items: center;
     display: flex;
 }
-.pizza{
+.produto{
     position: relative;
     border-radius: 12px;
     display: flex;
-    background-color: yellow;
 }
 .adicionar{
     right: -18px;
@@ -113,7 +167,7 @@ section{
     opacity: 0;
     transition: 0.5s;
 }
-.pizza:hover .adicionar{
+.produto:hover .adicionar{
     opacity: 1;
 }
 .animacao{
@@ -138,7 +192,7 @@ section{
     border-radius: 0 0 12px 12px;
     transition: 0.5s;
 }
-.pizza:hover .container-info{
+.produto:hover .container-info{
     bottom: 0;
 }
 .container-info p{
