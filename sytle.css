@@ -393,9 +393,6 @@ footer{
     .contato-item{
         padding: 0;
     }
-    .contato-item.logo{
-        
-    }
     .social li{
         justify-content: end;
     }
@@ -404,3 +401,80 @@ footer{
     }
 
 }
+/*mobile */
+@media(max-width:768px){
+
+    header{
+        position: absolute;
+        background-color: transparent;
+        padding: 17px;
+    }
+    .hero span{
+        justify-content: center;
+        font-size: 60px;
+    }
+    .hero h2{
+        justify-content: center;
+        font-size: 60px;
+    }
+    .hero img {
+        display: none;
+    }
+    header menu{
+        height: 64px;
+        width: 100vw;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        background-color: var(--primary-color);
+        color: white;
+        gap: 0;
+    
+    }
+    .home{
+        background-image: url(./img/pizza\ bg.jpg);
+        background-size: 160vh;
+        background-position: center;
+    }
+    .servicos{
+        align-items: center;
+    }
+    .servico-item{
+        flex-direction: column;
+        gap: 12px;
+    }
+    .servico-card{
+        width: 350px;
+        height: 260px;
+        flex-wrap: wrap;
+        padding: 0;
+        
+    }
+    .servico-card p{
+        display: none;
+    }
+    footer{
+        height: 700px;
+    }
+    .contatos-container{
+        display: flex;
+        flex-direction: row;
+    }
+    .contato-item{
+        justify-content: center;
+        flex-direction: column;
+    }
+    .contato-item.logo{
+        padding-top: 60px;
+    }
+    .social menu{
+        flex-direction: row;
+    }
+    .social li{
+        width: 50px;
+    }
+    .copyright{
+        text-align: center;
+    }
+}
+
