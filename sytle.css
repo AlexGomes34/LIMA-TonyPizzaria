@@ -35,6 +35,9 @@ header{
     background-color: #fff5;
     z-index: 999;
 }
+.logo02{
+    display: none;
+}
 header menu{
     display: flex;
     align-items: center;
@@ -322,6 +325,9 @@ footer{
         position: absolute;
         background-color: transparent;
     }
+    .logo02{
+        display: none;
+    }
     header menu{
         height: 64px;
         width: 100vw;
@@ -413,6 +419,15 @@ footer{
         justify-content: center;
         font-size: 60px;
     }
+    header .h2{
+        font-size: 2rem;
+    }
+    .logo02{
+        display: flex;
+    }
+    .logo{
+         display: none;
+    }
     .hero h2{
         justify-content: center;
         font-size: 60px;
@@ -435,6 +450,12 @@ footer{
         background-image: url(./img/pizza\ bg.jpg);
         background-size: 160vh;
         background-position: center;
+    }
+    .cardapio-item.bebidas .produto:nth-child(n+2){
+        display: none;
+    }
+    .cardapio-item.bebidas img{
+        width: auto;
     }
     .servicos{
         align-items: center;
