@@ -13,10 +13,11 @@ ul,ol,li{
 :root{
     --primary-color: #F07807;
     --secundary-color: #FBDDC1;
-    --default-shadow: 0 4px 4px #0004;
-    --default-padding: 0 80px
+    --default-shadow: 0 4px 8px #0004;
+    --defaut-padding: 0 80px;
 }
-html{
+html {
+    /* deixando o movimento automatico da página mais suave, usando a tag html*/
     scroll-behavior: smooth;
 }
 body{
@@ -24,20 +25,23 @@ body{
     background-color: var(--secundary-color);
 }
 header{
-    height: 60px;
+    position: fixed;
     width: 100%;
+    height: 60px;
     top: 60px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: var(--default-padding);
+    padding: var(--defaut-padding);
     background-color: #fff5;
     z-index: 999;
 }
-.logo02{
+
+.logo-branca{
     display: none;
 }
+
 header menu{
     display: flex;
     align-items: center;
@@ -62,17 +66,18 @@ header button{
 }
 section{
     height: 100vh;
-    padding: var(--default-padding);
+    padding: var(--defaut-padding);
 }
 .home{
-    background-image: url(img/bg-home.svg);
-    background-repeat:no-repeat;
-    background-position: top right; 
+    background-image: url(./img/bg-home.svg);
+    background-repeat: no-repeat;
+    background-position: top right;
     background-size: contain;
     display: grid;
     grid-template-rows: 3fr 1fr;
-    padding: var(--default-padding);
+    padding: var(--defaut-padding);
 }
+
 .hero{
     display: flex;
     justify-content: center;
@@ -80,96 +85,39 @@ section{
     gap: 64px;
 }
 .hero h2{
-    font-weight: 400;
-    width: 558px;
     font-size: 4rem;
+    width: 558px;
+    font-weight: 400;
     margin-bottom: 64px;
 }
 .hero span{
     color: var(--primary-color);
 }
-.cardapio{
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-}
-.titulo-secao{
-    display: flex;
-    align-items: center;
-    gap: 24px;
-}
-.titulo-secao h3{
-    font-size: 2.5rem;
-    color: var(--primary-color);
-    text-transform: uppercase;
-    font-weight: 500;
-}
-.cardapio-item{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    border-bottom: 2px solid var(--secundary-color);
-    height: 260px;
-}
-.cabecalho-item{
-    display: flex;
-    justify-content: space-between;
-    color: var(--primary-color);
-}
-.cabecalho-item h4, .cabecalho-item a{
-    font-size: 1.5rem;
-    font-weight: 600;
-}
-.cardapio-item.bebidas{
-    border: none;
-}
-.cardapio-item.bebidas .produto{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 4px;
-    padding: 16px;
-}
-.cardapio-item.bebidas .produto:hover{
-    box-shadow: 2px 2px 8px #bbb;
-    transition: 0.5s;
-}
-.cardapio-item.bebidas .valor{
-    width: 100%;
-    font-size: 1rem;
-    color: var(--primary-color);
-
-}
-.cardapio-item.bebidas .descricao{
-    font-size: 0.5rem;
-    width: 100%;
-}
 .container-produtos{
+    display: flex;
     justify-content: space-between;
     align-items: center;
-    display: flex;
 }
 .produto{
     position: relative;
-    border-radius: 12px;
     display: flex;
+    border-radius: 12px;
 }
 .adicionar{
+    position: absolute;
     right: -18px;
     top: -18px;
-    position: absolute;
+    display: grid;
+    place-content: center;
     height: 40px;
     width: 40px;
     background-color: var(--primary-color);
+    border: 4px solid white;
     border-radius: 13px;
     font-size: 32px;
     color: white;
-    display: grid;
-    place-content: center;
-    border: 4px solid white;
     opacity: 0;
-    transition: 0.5s;
+    transition: .5s;
 }
 .produto:hover .adicionar{
     opacity: 1;
@@ -177,15 +125,13 @@ section{
 .animacao{
     position: absolute;
     top: 0;
-    bottom: 0;
     left: 0;
     right: 0;
+    bottom: 0;
     overflow: hidden;
     border-radius: 12px;
 }
 .container-info{
-    align-items: center;
-    justify-content: space-between;
     position: absolute;
     display: flex;
     padding: 0 12px;
@@ -194,7 +140,9 @@ section{
     height: 36px;
     background-color: #0008;
     border-radius: 0 0 12px 12px;
-    transition: 0.5s;
+    justify-content: space-between;
+    align-items: center;
+    transition: .5s;
 }
 .produto:hover .container-info{
     bottom: 0;
@@ -212,21 +160,80 @@ section{
     height: 20px;
     background-color: var(--primary-color);
     font-size: 12px;
-    border-radius: 4px;
     color: white;
+    border-radius: 4px;
+}
+.cardapio{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    justify-content: space-evenly;
+}
+.titulo-secao{
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+.titulo-secao h3{
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.cardapio-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 260px;
+    border-bottom: 2px solid var(--secundary-color);
+}
+.cabecalho-item{
+    display: flex;
+    justify-content: space-between;
+    color: var(--primary-color);
+}
+.cabecalho-item h4,
+.cabecalho-item a{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.cardapio-item.bebidas{
+    border: none;
+}
+.cardapio-item.bebidas .produto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 4px;
+    padding: 16px;
+}
+.cardapio-item.bebidas .produto:hover{
+    box-shadow: 2px 2px 8px #bbb;
+    transition: .5s;
+}
+.cardapio-item.bebidas .valor{
+    font-size: 1rem;
+    color: var(--primary-color);
+    width: 100%;
+}
+.cardapio-item.bebidas .descricao{
+    font-size: 0.5rem;
+    width: 100%;
 }
 .servicos{
-    background-color: var(--secundary-color);
     height: auto;
+    background-color: var(--secundary-color);
     padding-block: 64px;
     display: flex;
     flex-direction: column;
     gap: 32px;
 }
+
 .servico-item{
     display: flex;
     justify-content: space-between;
 }
+
 .servico-card{
     height: 500px;
     width: 400px;
@@ -235,66 +242,77 @@ section{
     padding: 48px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     justify-content: space-evenly;
+    align-items: center;
 }
+
 .servico-card img{
-    /* Cria um filtro de sombra para areas nao visíveis */
+    /* CRTL + / para adicionar comentario */
+    /* cria sombras em areas visiveis*/
     filter: drop-shadow(var(--default-shadow));
 }
+
 .servico-card h4{
     font-size: 2.5rem;
-    font-weight: 500;
+    font-weight: 400;
     color: var(--primary-color);
     text-shadow: var(--default-shadow);
 }
+
 .servico-card p{
     font-size: 1.2rem;
-    font-weight: 300;
     text-align: center;
+    font-weight: 300;
     text-shadow: var(--default-shadow);
 }
+
 footer{
-    height: 526px;
+    height: 525px;
     background-color: var(--primary-color);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    color: white;
     align-items: center;
+    color: white;
 }
+
 .contatos-container{
     display: flex;
     flex-grow: 1;
-    width: 75%;
     justify-content: space-between;
+    width: 75%;
 }
+
 .contato-item{
     display: flex;
     flex-direction: column;
     padding-top: 127px;
-    gap: 16px;
+    gap: 17px;
 }
+
 .contato-item.logo{
     justify-content: center;
     padding-top: 0;
 }
+
 .contato-item h4{
     font-size: 1.5rem;
     font-weight: 500;
 }
+
 .contato-item menu{
     display: flex;
     flex-direction: column;
     gap: 16px;
     font-weight: 300;
 }
+
 .contato-item li{
     display: flex;
     gap: 16px;
     width: 200px;
 }
+
 .social a{
     width: 50px;
     height: 50px;
@@ -303,199 +321,270 @@ footer{
     display: grid;
     place-content: center;
     font-size: 1.5rem;
-    transition: 0.2s;
+    transition: .5s;
 }
+
 .social a:hover{
-    background-color: white;
+    background-color: var(--secundary-color);
     color: var(--primary-color);
 }
+
 .copyright{
     height: 72px;
+    text-align: center;
+    /* usando o grid para centralizar o texto, é mais facil quando é apenas um elemento*/
     display: grid;
     place-content: center;
+
     border-top: 1px solid var(--secundary-color);
     font-size: 0.7rem;
     font-weight: 300;
     font-style: italic;
     width: 100%;
-
 }
-@media(max-width:1024px){
+
+/*TABLET*/
+
+/* media é como um if so que no CSS*/
+@media (max-width: 1024px){
     header{
+        /*a referencia de posicao é do pai dele*/
         position: absolute;
         background-color: transparent;
     }
-    .logo02{
-        display: none;
-    }
+
     header menu{
         height: 64px;
         width: 100vw;
         position: fixed;
         left: 0;
         bottom: 0;
-        background-color: var(--primary-color);
         color: white;
+        background-color: var(--primary-color);
         justify-content: space-evenly;
-
     }
+
     .home{
         grid-template-rows: none;
     }
+
     .home .container-produtos{
         display: none;
     }
-    .hero {
+
+    .hero{
         flex-direction: column-reverse;
         align-items: center;
-
     }
-
+    
     .produto:nth-child(3),
     .produto:nth-child(4){
         display: none;
     }
-    .produto{
-        width: 100%;
-    }
-    .produto img{
-        width: 100%;
-    }
-    .container-produtos{
-        gap: 27px;
-    }
+
     .cardapio-item.bebidas .produto:nth-child(n+4){
         display: none;
     }
+
     .cardapio-item.bebidas img{
         width: auto;
     }
+    
+    .container-produtos{
+        gap: 16px;
+    }
+
+    .produto{
+        width: 100%;
+    }
+
+    .produto img{
+        width: 100%;
+    }
+
     .servico-item{
         flex-direction: column;
         gap: 32px;
     }
+
     .servico-card{
         width: 100%;
         height: 260px;
         flex-wrap: wrap;
-        
     }
+    
     .servico-card p{
         width: 320px;
     }
-    .contato-item.links{
+
+    .contato-item.links {
         display: none;
     }
+
     .contatos-container{
         height: 400px;
-        flex-direction: column;
         width: 60%;
+        flex-direction: column;
         flex-wrap: wrap;
         justify-content: center;
-        align-items: center;
-        gap: 32px;
         align-items: start;
+        gap: 32px;
     }
     .contato-item{
         padding: 0;
     }
-    .social li{
+
+    .social li {
         justify-content: end;
     }
+
     .copyright{
         margin-bottom: 64px;
     }
 
 }
-/*mobile */
-@media(max-width:768px){
 
+/*MOBILE*/
+
+@media (max-width: 768px){
     header{
-        position: absolute;
-        background-color: transparent;
-        padding: 17px;
+        padding: 12px;
     }
-    .hero span{
-        justify-content: center;
-        font-size: 60px;
-    }
-    header .h2{
-        font-size: 2rem;
-    }
-    .logo02{
-        display: flex;
-    }
-    .logo{
-         display: none;
-    }
-    .hero h2{
-        justify-content: center;
-        font-size: 60px;
-    }
-    .hero img {
-        display: none;
-    }
+    
+
     header menu{
         height: 64px;
         width: 100vw;
         position: fixed;
         left: 0;
         bottom: 0;
-        background-color: var(--primary-color);
         color: white;
-        gap: 0;
-    
+        background-color: var(--primary-color);
+        gap: 13px;
     }
+
+    .logo-inicial{
+        display: none;
+    }
+
+    .logo-branca{
+        display: block;
+    }
+
+    .titulo-secao{
+        justify-content: center;
+    }
+
     .home{
-        background-image: url(./img/pizza\ bg.jpg);
+        padding: 0px;
+        height: 600px;
+        place-items: left;
+        background-image: url(./img/pizza-fundo.jpg);
         background-size: 160vh;
         background-position: center;
     }
-    .cardapio-item.bebidas .produto:nth-child(n+2){
-        display: none;
+
+    .filtro{
+        background-color: #F07807;
+        width: 100%;
+        height: 600px;
+        opacity: 0.7;
+        position: absolute;
     }
-    .cardapio-item.bebidas img{
-        width: auto;
-    }
-    .servicos{
-        align-items: center;
-    }
-    .servico-item{
-        flex-direction: column;
-        gap: 12px;
-    }
-    .servico-card{
-        width: 350px;
-        height: 260px;
-        flex-wrap: wrap;
+
+    .hero{
+        grid-template-rows: none;
+        place-content: end;
         padding: 0;
-        
     }
-    .servico-card p{
+
+    .hero img{
         display: none;
     }
-    footer{
-        height: 700px;
+
+    .hero h2{
+        width: 287px;
+        position: absolute;
+        font-size: 40px;
+        color: white;
+        margin-right: 75px;
     }
+
+    .hero span{
+        background-color: white;
+    }
+
     .contatos-container{
         display: flex;
         flex-direction: row;
+        padding-top: 56px;
     }
+
     .contato-item{
         justify-content: center;
         flex-direction: column;
     }
-    .contato-item.logo{
-        padding-top: 60px;
+
+    .contato-item h4{
+        text-align: center;
     }
+
+    .cabecalho-item{
+        text-align: center;
+        justify-content: center;
+        width: 300px;
+    }
+
+    .cabecalho-item a{
+        display: none;
+    }
+
+    .produto:nth-child(2){
+        display: none;
+    }
+    
+    .produto span{
+        padding-left: 20%;        
+    }
+
+    .cardapio{
+        padding: 60px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .cardapio-item.bebidas .produto:nth-child(n+2){
+        display: none;
+    }
+
+    .servicos{
+        padding: 20px;
+    }
+
+    .servico-card{
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .servico-card p{
+        display: none;
+    }
+
     .social menu{
         flex-direction: row;
     }
+
     .social li{
         width: 50px;
     }
+
+    footer{
+        height: 600px;
+    }
+
     .copyright{
         text-align: center;
     }
-}
 
+
+}

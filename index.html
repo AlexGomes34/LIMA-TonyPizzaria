@@ -7,19 +7,19 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/b9965a5443.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./sytle.css">
+    <script src="https://kit.fontawesome.com/9b6d3efa9e.js" crossorigin="anonymous"></script>
     <title>Tony Pizzaria</title>
 </head>
 <body>
     <header>
-        <img class="logo" src="./img/logo.svg" alt="Logo Tony Pizzaria">
-        <img class="logo02"src="./img/Logo 2.png" alt="Logo Tony Pizzaria">
+        <img class="logo-inicial" src="./img/logo.svg" alt="Logo Tony Pizzaria">
+        <img class="logo-branca" src="./img/logo-branco.svg" alt="Logo Tony Pizzaria">
         <menu>
             <li><a href="#home">Home</a></li>
             <li><a href="#cardapio">Cardapio</a></li>
             <li><a href="#servicos">Serviços</a></li>
-            <li><a href="#contato">Contato</a></li>
+            <li><a href="#contatos">Contato</a></li>
         </menu>
         <button>
             <img src="./img/icon-user.svg" alt="Icone usuário">
@@ -28,6 +28,7 @@
     </header>
     <main>
         <section class="home" id="home">
+            <div class="filtro"></div>
             <div class="hero">
                 <h2>Não é apenas uma <span>Pizza</span>, é uma experiência!</h2>
                 <img src="./img/pizza-home.png" alt="Pizza">
@@ -42,7 +43,6 @@
                             <span>R$ 16,00</span>
                         </div>
                     </div>
-                    
                 </div>
                 <div class="produto">
                     <div class="adicionar">+</div>
@@ -53,8 +53,8 @@
                             <span>R$ 16,00</span>
                         </div>
                     </div>
-                    
-                </div> <div class="produto">
+                </div>
+                <div class="produto">
                     <div class="adicionar">+</div>
                     <img src="./img/pizza3.png" alt="Pizza">
                     <div class="animacao">
@@ -63,8 +63,8 @@
                             <span>R$ 16,00</span>
                         </div>
                     </div>
-                    
-                </div> <div class="produto">
+                </div>
+                <div class="produto">
                     <div class="adicionar">+</div>
                     <img src="./img/pizza2.png" alt="Pizza">
                     <div class="animacao">
@@ -73,14 +73,12 @@
                             <span>R$ 16,00</span>
                         </div>
                     </div>
-                    
                 </div>
             </div>
         </section>
         <section class="cardapio" id="cardapio">
-
             <div class="titulo-secao">
-                <img src="img/icon pz.png" alt="TONY ICON">
+                <img src="./img/tony-icon.svg" alt="tony icon">
                 <h3>Cardápio</h3>
             </div>
             <div class="cardapio-item">
@@ -98,7 +96,6 @@
                                 <span>R$ 16,00</span>
                             </div>
                         </div>
-                        
                     </div>
                     <div class="produto">
                         <div class="adicionar">+</div>
@@ -109,8 +106,7 @@
                                 <span>R$ 16,00</span>
                             </div>
                         </div>
-                        
-                    </div> 
+                    </div>
                     <div class="produto">
                         <div class="adicionar">+</div>
                         <img src="./img/pizza3.png" alt="Pizza">
@@ -120,8 +116,7 @@
                                 <span>R$ 16,00</span>
                             </div>
                         </div>
-                        
-                    </div> 
+                    </div>
                     <div class="produto">
                         <div class="adicionar">+</div>
                         <img src="./img/pizza2.png" alt="Pizza">
@@ -136,7 +131,7 @@
             </div>
             <div class="cardapio-item">
                 <div class="cabecalho-item">
-                    <h4>Minhas pizzas favoritas</h4>
+                    <h4>Menu</h4>
                     <a href="#">VER TUDO</a>
                 </div>
                 <div class="container-produtos">
@@ -149,7 +144,6 @@
                                 <span>R$ 16,00</span>
                             </div>
                         </div>
-                        
                     </div>
                     <div class="produto">
                         <div class="adicionar">+</div>
@@ -160,8 +154,7 @@
                                 <span>R$ 16,00</span>
                             </div>
                         </div>
-                        
-                    </div> 
+                    </div>
                     <div class="produto">
                         <div class="adicionar">+</div>
                         <img src="./img/pizza3.png" alt="Pizza">
@@ -171,8 +164,7 @@
                                 <span>R$ 16,00</span>
                             </div>
                         </div>
-                        
-                    </div> 
+                    </div>
                     <div class="produto">
                         <div class="adicionar">+</div>
                         <img src="./img/pizza2.png" alt="Pizza">
@@ -193,79 +185,71 @@
                 <div class="container-produtos">
                     <div class="produto">
                         <div class="adicionar">+</div>
-                        <img src="./img/coca.png" alt="Pizza">
+                        <img src="./img/coca-cola.png" alt="Pizza">
                         <span class="valor">R$ 16,00</span>
-                        <span class="descricao">Coca-Cola sem Açúcar 1L</span>
-                        </div>
-                        <div class="produto">
-                            <div class="adicionar">+</div>
-                            <img src="./img/coca.png" alt="Pizza">
-                            <span class="valor">R$ 16,00</span>
-                            <span class="descricao">Coca-Cola sem Açúcar 1L</span>
-                            </div>
-                            <div class="produto">
-                                <div class="adicionar">+</div>
-                                <img src="./img/coca.png" alt="Pizza">
-                                <span class="valor">R$ 16,00</span>
-                                <span class="descricao">Coca-Cola sem Açúcar 1L</span>
-                                </div>
-                                <div class="produto">
-                                    <div class="adicionar">+</div>
-                                    <img src="./img/coca.png" alt="Pizza">
-                                    <span class="valor">R$ 16,00</span>
-                                    <span class="descricao">Coca-Cola sem Açúcar 1L</span>
-                                    </div>
-                                    <div class="produto">
-                                        <div class="adicionar">+</div>
-                                        <img src="./img/coca.png" alt="Pizza">
-                                        <span class="valor">R$ 16,00</span>
-                                        <span class="descricao">Coca-Cola sem Açúcar 1L</span>
-                                        </div>
-                                        <div class="produto">
-                                            <div class="adicionar">+</div>
-                                            <img src="./img/coca.png" alt="Pizza">
-                                            <span class="valor">R$ 16,00</span>
-                                            <span class="descricao">Coca-Cola sem Açúcar 1L</span>
-                                            </div>
+                        <span class="descricao">Coca-Cola sem Açucar 1L</span>
                     </div>
-                    
-                        </div>
+                    <div class="produto">
+                        <div class="adicionar">+</div>
+                        <img src="./img/coca-cola.png" alt="Pizza">
+                        <span class="valor">R$ 16,00</span>
+                        <span class="descricao">Coca-Cola sem Açucar 1L</span>
+                    </div>
+                    <div class="produto">
+                        <div class="adicionar">+</div>
+                        <img src="./img/coca-cola.png" alt="Pizza">
+                        <span class="valor">R$ 16,00</span>
+                        <span class="descricao">Coca-Cola sem Açucar 1L</span>
+                    </div>
+                    <div class="produto">
+                        <div class="adicionar">+</div>
+                        <img src="./img/coca-cola.png" alt="Pizza">
+                        <span class="valor">R$ 16,00</span>
+                        <span class="descricao">Coca-Cola sem Açucar 1L</span>
+                    </div>
+                    <div class="produto">
+                        <div class="adicionar">+</div>
+                        <img src="./img/coca-cola.png" alt="Pizza">
+                        <span class="valor">R$ 16,00</span>
+                        <span class="descricao">Coca-Cola sem Açucar 1L</span>
+                    </div>
+                    <div class="produto">
+                        <div class="adicionar">+</div>
+                        <img src="./img/coca-cola.png" alt="Pizza">
+                        <span class="valor">R$ 16,00</span>
+                        <span class="descricao">Coca-Cola sem Açucar 1L</span>
                     </div>
                 </div>
             </div>
-
-        
         </section>
-        <section class="servicos" id="servicos">
-            <div class="titulo-secao">
-                <img src="./img/icon pz.png" alt="">
-                <h3>SERVIÇOS</h3>
-            </div>
-            <DIv class="servico-item">
-                <div class="servico-card">
-                    <img src="./img/people.png" alt="Fast Food">
-                    <h4>Fast Food</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Erat morbi viverra bibendum in sit. Ac semper arcu facilisis ornare suspendisse. Eget at tincidunt neque sapien enim tristique eu</p>
+            <section class="servicos" id="servicos">
+                <div class="titulo-secao">
+                    <img src="./img/tony-icon.svg" alt="">
+                    <h3>SERVIÇOS</h3>
                 </div>
-                <div class="servico-card">
-                    <img src="./img/carrinho.png" alt="Drive Trhu">
-                    <h4>Drive Thru</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Erat morbi viverra bibendum in sit. Ac semper arcu facilisis ornare suspendisse. Eget at tincidunt neque sapien enim tristique eu</p>
+                <div class="servico-item">
+                    <div class="servico-card">
+                        <img src="./img/fast-food.svg" alt="Fast Food">
+                        <h4>Fast Food</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Erat morbi viverra bibendum in sit. Ac semper arcu facilisis ornare suspendisse. Eget at tincidunt neque sapien enim tristique eu.</p>
+                    </div>
+                    <div class="servico-card">
+                        <img src="./img/drive-thru.svg" alt="Drive Thru">
+                        <h4>Drive-Thru</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Erat morbi viverra bibendum in sit. Ac semper arcu facilisis ornare suspendisse. Eget at tincidunt neque sapien enim tristique eu.</p>
+                    </div>
+                    <div class="servico-card">
+                        <img src="./img/deliveries.svg" alt="Deliveries">
+                        <h4>Deliveries</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Erat morbi viverra bibendum in sit. Ac semper arcu facilisis ornare suspendisse. Eget at tincidunt neque sapien enim tristique eu.</p>
+                    </div>
                 </div>
-                <div class="servico-card">
-                    <img src="./img/carro.png" alt="">
-                    <h4>Deliveries</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Erat morbi viverra bibendum in sit. Ac semper arcu facilisis ornare suspendisse. Eget at tincidunt neque sapien enim tristique eu</p>
-                </div>
-            </DIv>
-
-
-        </section>
+            </section>
     </main>
-    <footer>
+    <footer id="contatos">
         <div class="contatos-container">
             <div class="contato-item logo">
-                <img src="./img/logo.png" alt="LOGO">
+                <img src="./img/logo-branco.svg" alt="Logo branco">
             </div>
             <div class="contato-item links">
                 <h4>Links</h4>
@@ -277,17 +261,17 @@
                         <a href="#">Cardápio</a>
                     </li>
                     <li>
-                        <a href="#">Serviços</a>
+                        <a href="#">Serviço</a>
                     </li>
                     <li>
-                        <a href="#">Contatos</a>
+                        <a href="#">Contato</a>
                     </li>
                     <li>
                         <a href="#">Login</a>
                     </li>
                 </menu>
             </div>
-            <div class="contato-item">
+            <div class="contato-item contato">
                 <h4>Contato</h4>
                 <menu>
                     <li>
@@ -328,9 +312,10 @@
                     </li>
                 </menu>
             </div>
-
         </div>
-        <p class="copyright">© 2025 Tony Pizzaria | Todos os Direitos Reservados | Desenvolvido por Alex Gomes</p>
+        <p class="copyright">
+            © 2025 Tony Pizzaria | Todos os Direitos Reservados | Desenvolvido por Eduardo Feitosa
+        </p>
     </footer>
 </body>
 </html>
